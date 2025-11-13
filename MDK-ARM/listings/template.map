@@ -1,0 +1,1612 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.DoSomething) refers to systemtimer.o(i.SystemTimer_GetTick) for SystemTimer_GetTick
+    main.o(i.DoSomething) refers to board_matrix.o(i.MatrixDrawRect) for MatrixDrawRect
+    main.o(i.DoSomething) refers to board_matrix.o(i.MatrixDrawPixel) for MatrixDrawPixel
+    main.o(i.DoSomething) refers to main.o(.data) for timer
+    main.o(i.System_Periodic_Handle) refers to board_matrix.o(i.Matrix_Periodic_Handler) for Matrix_Periodic_Handler
+    main.o(i.System_Periodic_Handle) refers to main.o(i.DoSomething) for DoSomething
+    main.o(i.main) refers to at32f435_437_clock.o(i.system_clock_config) for system_clock_config
+    main.o(i.main) refers to systemtimer.o(i.SystemTimer_Config) for SystemTimer_Config
+    main.o(i.main) refers to at32f435_437_misc.o(i.nvic_priority_group_config) for nvic_priority_group_config
+    main.o(i.main) refers to board_led.o(i.BSP_LED_Init) for BSP_LED_Init
+    main.o(i.main) refers to board_led.o(i.BSP_LED_Off) for BSP_LED_Off
+    main.o(i.main) refers to board_matrix.o(i.Matrix_Init) for Matrix_Init
+    main.o(i.main) refers to main.o(i.System_Periodic_Handle) for System_Periodic_Handle
+    main.o(i.main) refers to main.o(.bss) for Modul
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_reset) for crm_reset
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_periph_clock_enable) for crm_periph_clock_enable
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_clock_source_enable) for crm_clock_source_enable
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_hext_stable_wait) for crm_hext_stable_wait
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_pll_config) for crm_pll_config
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_flag_get) for crm_flag_get
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_ahb_div_set) for crm_ahb_div_set
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_apb2_div_set) for crm_apb2_div_set
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_apb1_div_set) for crm_apb1_div_set
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_auto_step_mode_enable) for crm_auto_step_mode_enable
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_sysclk_switch) for crm_sysclk_switch
+    at32f435_437_clock.o(i.system_clock_config) refers to at32f435_437_crm.o(i.crm_sysclk_switch_status_get) for crm_sysclk_switch_status_get
+    at32f435_437_clock.o(i.system_clock_config) refers to system_at32f435_437.o(i.system_core_clock_update) for system_core_clock_update
+    at32f435_437_int.o(i.SysTick_Handler) refers to systemtimer.o(i.SystemTimer_IncTick) for SystemTimer_IncTick
+    systemtimer.o(i.SystemTimer_Config) refers to at32f435_437_misc.o(i.systick_clock_source_config) for systick_clock_source_config
+    systemtimer.o(i.SystemTimer_Config) refers to system_at32f435_437.o(.data) for system_core_clock
+    systemtimer.o(i.SystemTimer_GetTick) refers to systemtimer.o(.data) for uwTick
+    systemtimer.o(i.SystemTimer_IncTick) refers to systemtimer.o(.data) for uwTick
+    board_delay.o(i.delay_ms) refers to systemtimer.o(i.SystemTimer_GetTick) for SystemTimer_GetTick
+    board_delay.o(i.delay_sec) refers to board_delay.o(i.delay_ms) for delay_ms
+    board_delay.o(i.delay_us) refers to system_at32f435_437.o(.data) for system_core_clock
+    board_led.o(i.BSP_LED_Init) refers to at32f435_437_gpio.o(i.gpio_default_para_init) for gpio_default_para_init
+    board_led.o(i.BSP_LED_Init) refers to at32f435_437_crm.o(i.crm_periph_clock_enable) for crm_periph_clock_enable
+    board_led.o(i.BSP_LED_Init) refers to at32f435_437_gpio.o(i.gpio_init) for gpio_init
+    board_matrix.o(i.MatrixDrawRect) refers to board_matrix.o(.constdata) for .constdata
+    board_matrix.o(i.MatrixDrawRect) refers to board_matrix.o(.data) for .data
+    board_matrix.o(i.MatrixDrawRect) refers to board_matrix.o(.bss) for .bss
+    board_matrix.o(i.MatrixRenderRect) refers to board_matrix.o(.data) for .data
+    board_matrix.o(i.MatrixRenderRect) refers to board_matrix.o(.constdata) for .constdata
+    board_matrix.o(i.MatrixRenderRect) refers to board_matrix.o(.bss) for .bss
+    board_matrix.o(i.MatrixSetBrightness) refers to board_matrix.o(.data) for .data
+    board_matrix.o(i.MatrixSetDrawRect) refers to board_matrix.o(.data) for .data
+    board_matrix.o(i.MatrixSetRenderRect) refers to board_matrix.o(.data) for .data
+    board_matrix.o(i.MatrixSetUpdate) refers to board_matrix.o(.data) for .data
+    board_matrix.o(i.Matrix_Init) refers to matrix_ll.o(i.matrixInit) for matrixInit
+    board_matrix.o(i.Matrix_Init) refers to rt_memclr.o(.text) for __aeabi_memclr
+    board_matrix.o(i.Matrix_Init) refers to matrix_ll.o(i.matrixSendPreAct) for matrixSendPreAct
+    board_matrix.o(i.Matrix_Init) refers to matrix_ll.o(i.matrixSendOn) for matrixSendOn
+    board_matrix.o(i.Matrix_Init) refers to matrix_ll.o(i.matrixSendVerticalSync) for matrixSendVerticalSync
+    board_matrix.o(i.Matrix_Init) refers to matrix_ll.o(i.matrixDelay) for matrixDelay
+    board_matrix.o(i.Matrix_Init) refers to matrix_ll.o(i.matrixSendConfReg) for matrixSendConfReg
+    board_matrix.o(i.Matrix_Init) refers to board_matrix.o(i.MatrixDrawRect) for MatrixDrawRect
+    board_matrix.o(i.Matrix_Init) refers to matrix_ll.o(i.matrixPwmStart) for matrixPwmStart
+    board_matrix.o(i.Matrix_Init) refers to main.o(.bss) for Modul
+    board_matrix.o(i.Matrix_Init) refers to board_matrix.o(.data) for .data
+    board_matrix.o(i.Matrix_Init) refers to board_matrix.o(.bss) for .bss
+    board_matrix.o(i.Matrix_Init) refers to matrix_ll.o(.data) for registers
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to systemtimer.o(i.SystemTimer_GetTick) for SystemTimer_GetTick
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(i.matrixVerticalSync) for matrixVerticalSync
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to board_matrix.o(i.MatrixDrawRect) for MatrixDrawRect
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to board_matrix.o(i.MatrixRenderRect) for MatrixRenderRect
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(i.matrixSetLatHi) for matrixSetLatHi
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(i.matrixSendClock) for matrixSendClock
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(i.matrixSetLatLow) for matrixSetLatLow
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(i.matrixFrameSwap) for matrixFrameSwap
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(i.matrixSendPreAct) for matrixSendPreAct
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(i.matrixSendOn) for matrixSendOn
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(i.matrixDelay) for matrixDelay
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(i.matrixSendConfReg) for matrixSendConfReg
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to board_matrix.o(.data) for .data
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to board_matrix.o(.bss) for .bss
+    board_matrix.o(i.Matrix_Periodic_Handler) refers to matrix_ll.o(.data) for registers
+    board_matrix.o(i.isMatrixBusy) refers to board_matrix.o(.data) for .data
+    matrix_ll.o(i.TMR8_OVF_TMR13_IRQHandler) refers to at32f435_437_tmr.o(i.tmr_flag_get) for tmr_flag_get
+    matrix_ll.o(i.TMR8_OVF_TMR13_IRQHandler) refers to at32f435_437_tmr.o(i.tmr_flag_clear) for tmr_flag_clear
+    matrix_ll.o(i.TMR8_OVF_TMR13_IRQHandler) refers to matrix_ll.o(i.matrixSendVerticalSync) for matrixSendVerticalSync
+    matrix_ll.o(i.TMR8_OVF_TMR13_IRQHandler) refers to matrix_ll.o(.data) for .data
+    matrix_ll.o(i.matrixFrameSwap) refers to matrix_ll.o(.data) for .data
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_gpio.o(i.gpio_default_para_init) for gpio_default_para_init
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_crm.o(i.crm_periph_clock_enable) for crm_periph_clock_enable
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_gpio.o(i.gpio_init) for gpio_init
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_gpio.o(i.gpio_pin_mux_config) for gpio_pin_mux_config
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_crm.o(i.crm_clocks_freq_get) for crm_clocks_freq_get
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_base_init) for tmr_base_init
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_cnt_dir_set) for tmr_cnt_dir_set
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_clock_source_div_set) for tmr_clock_source_div_set
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_output_default_para_init) for tmr_output_default_para_init
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_output_channel_config) for tmr_output_channel_config
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_channel_value_set) for tmr_channel_value_set
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_sub_sync_mode_set) for tmr_sub_sync_mode_set
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_primary_mode_select) for tmr_primary_mode_select
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_period_buffer_enable) for tmr_period_buffer_enable
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_trigger_input_select) for tmr_trigger_input_select
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_sub_mode_select) for tmr_sub_mode_select
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_flag_clear) for tmr_flag_clear
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_tmr.o(i.tmr_interrupt_enable) for tmr_interrupt_enable
+    matrix_ll.o(i.matrixInit) refers to at32f435_437_misc.o(i.nvic_irq_enable) for nvic_irq_enable
+    matrix_ll.o(i.matrixSendClock) refers to matrix_ll.o(i.matrixDelaySignal) for matrixDelaySignal
+    matrix_ll.o(i.matrixSendConfReg) refers to matrix_ll.o(i.matrixSendClock) for matrixSendClock
+    matrix_ll.o(i.matrixSendOff) refers to matrix_ll.o(i.matrixDelaySignal) for matrixDelaySignal
+    matrix_ll.o(i.matrixSendOff) refers to matrix_ll.o(i.matrixSendClock) for matrixSendClock
+    matrix_ll.o(i.matrixSendOn) refers to matrix_ll.o(i.matrixDelaySignal) for matrixDelaySignal
+    matrix_ll.o(i.matrixSendOn) refers to matrix_ll.o(i.matrixSendClock) for matrixSendClock
+    matrix_ll.o(i.matrixSendPreAct) refers to matrix_ll.o(i.matrixDelaySignal) for matrixDelaySignal
+    matrix_ll.o(i.matrixSendPreAct) refers to matrix_ll.o(i.matrixSendClock) for matrixSendClock
+    matrix_ll.o(i.matrixSendVerticalSync) refers to matrix_ll.o(i.matrixDelaySignal) for matrixDelaySignal
+    matrix_ll.o(i.matrixSendVerticalSync) refers to matrix_ll.o(i.matrixSendClock) for matrixSendClock
+    matrix_ll.o(i.matrixVerticalSync) refers to matrix_ll.o(.data) for .data
+    system_at32f435_437.o(i.system_core_clock_update) refers to at32f435_437_crm.o(i.crm_sysclk_switch_status_get) for crm_sysclk_switch_status_get
+    system_at32f435_437.o(i.system_core_clock_update) refers to lludivv7m.o(.text) for __aeabi_uldivmod
+    system_at32f435_437.o(i.system_core_clock_update) refers to system_at32f435_437.o(.data) for system_core_clock
+    system_at32f435_437.o(i.system_core_clock_update) refers to system_at32f435_437.o(.constdata) for pll_fr_table
+    startup_at32f435_437.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_at32f435_437.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_at32f435_437.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_at32f435_437.o(RESET) refers to startup_at32f435_437.o(STACK) for __initial_sp
+    startup_at32f435_437.o(RESET) refers to startup_at32f435_437.o(.text) for Reset_Handler
+    startup_at32f435_437.o(RESET) refers to at32f435_437_int.o(i.NMI_Handler) for NMI_Handler
+    startup_at32f435_437.o(RESET) refers to at32f435_437_int.o(i.HardFault_Handler) for HardFault_Handler
+    startup_at32f435_437.o(RESET) refers to at32f435_437_int.o(i.MemManage_Handler) for MemManage_Handler
+    startup_at32f435_437.o(RESET) refers to at32f435_437_int.o(i.BusFault_Handler) for BusFault_Handler
+    startup_at32f435_437.o(RESET) refers to at32f435_437_int.o(i.UsageFault_Handler) for UsageFault_Handler
+    startup_at32f435_437.o(RESET) refers to at32f435_437_int.o(i.SVC_Handler) for SVC_Handler
+    startup_at32f435_437.o(RESET) refers to at32f435_437_int.o(i.DebugMon_Handler) for DebugMon_Handler
+    startup_at32f435_437.o(RESET) refers to at32f435_437_int.o(i.PendSV_Handler) for PendSV_Handler
+    startup_at32f435_437.o(RESET) refers to at32f435_437_int.o(i.SysTick_Handler) for SysTick_Handler
+    startup_at32f435_437.o(RESET) refers to matrix_ll.o(i.TMR8_OVF_TMR13_IRQHandler) for TMR8_OVF_TMR13_IRQHandler
+    startup_at32f435_437.o(RESET) refers to matrix_ll.o(i.TMR5_GLOBAL_IRQHandler) for TMR5_GLOBAL_IRQHandler
+    startup_at32f435_437.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_at32f435_437.o(.text) refers to system_at32f435_437.o(i.SystemInit) for SystemInit
+    startup_at32f435_437.o(.text) refers to __main.o(!!!main) for __main
+    startup_at32f435_437.o(.text) refers to startup_at32f435_437.o(HEAP) for Heap_Mem
+    startup_at32f435_437.o(.text) refers to startup_at32f435_437.o(STACK) for Stack_Mem
+    at32f435_437_crm.o(i.crm_clocks_freq_get) refers to at32f435_437_crm.o(i.crm_sysclk_switch_status_get) for crm_sysclk_switch_status_get
+    at32f435_437_crm.o(i.crm_clocks_freq_get) refers to lludivv7m.o(.text) for __aeabi_uldivmod
+    at32f435_437_crm.o(i.crm_clocks_freq_get) refers to at32f435_437_crm.o(.constdata) for pll_fr_table
+    at32f435_437_crm.o(i.crm_hext_stable_wait) refers to at32f435_437_crm.o(i.crm_flag_get) for crm_flag_get
+    at32f435_437_crm.o(i.crm_hick_sclk_frequency_select) refers to at32f435_437_crm.o(i.crm_hick_divider_select) for crm_hick_divider_select
+    at32f435_437_crm.o(i.crm_usb_clock_source_select) refers to at32f435_437_crm.o(i.crm_hick_sclk_frequency_select) for crm_hick_sclk_frequency_select
+    at32f435_437_gpio.o(i.gpio_reset) refers to at32f435_437_crm.o(i.crm_periph_reset) for crm_periph_reset
+    at32f435_437_usart.o(i.usart_init) refers to at32f435_437_crm.o(i.crm_clocks_freq_get) for crm_clocks_freq_get
+    at32f435_437_usart.o(i.usart_reset) refers to at32f435_437_crm.o(i.crm_periph_reset) for crm_periph_reset
+    at32f435_437_qspi.o(i.qspi_reset) refers to at32f435_437_crm.o(i.crm_periph_reset) for crm_periph_reset
+    at32f435_437_i2c.o(i.i2c_reset) refers to at32f435_437_crm.o(i.crm_periph_reset) for crm_periph_reset
+    at32f435_437_adc.o(i.adc_reset) refers to at32f435_437_crm.o(i.crm_periph_reset) for crm_periph_reset
+    at32f435_437_tmr.o(i.tmr_external_clock_mode1_config) refers to at32f435_437_tmr.o(i.tmr_external_clock_config) for tmr_external_clock_config
+    at32f435_437_tmr.o(i.tmr_external_clock_mode2_config) refers to at32f435_437_tmr.o(i.tmr_external_clock_config) for tmr_external_clock_config
+    at32f435_437_tmr.o(i.tmr_reset) refers to at32f435_437_crm.o(i.crm_periph_reset) for crm_periph_reset
+    at32f435_437_scfg.o(i.scfg_reset) refers to at32f435_437_crm.o(i.crm_periph_reset) for crm_periph_reset
+    at32f435_437_usb.o(i.usb_global_init) refers to at32f435_437_usb.o(i.usb_global_reset) for usb_global_reset
+    at32f435_437_usb.o(i.usb_host_disable) refers to at32f435_437_usb.o(i.usb_flush_rx_fifo) for usb_flush_rx_fifo
+    at32f435_437_usb.o(i.usb_host_disable) refers to at32f435_437_usb.o(i.usb_flush_tx_fifo) for usb_flush_tx_fifo
+    at32f435_437_spi.o(i.i2s_init) refers to at32f435_437_crm.o(i.crm_clocks_freq_get) for crm_clocks_freq_get
+    at32f435_437_spi.o(i.spi_i2s_reset) refers to at32f435_437_crm.o(i.crm_periph_reset) for crm_periph_reset
+    rt_memclr.o(.text) refers to rt_memclr_w.o(.text) for _memset_w
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    aeabi_ldiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_at32f435_437.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000001) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libinit2.o(.ARM.Collect$$libinit$$00000001) refers to fpinit.o(x$fpl$fpinit) for _fp_init
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_fini_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000009) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000011) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000012) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000006) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    board_matrix.o(i.MatrixDrawPixel) refers to board_matrix.o(.constdata) for .constdata
+    board_matrix.o(i.MatrixDrawPixel) refers to board_matrix.o(.bss) for .bss
+    board_matrix.o(i.MatrixDrawPixel) refers to board_matrix.o(.data) for .data
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_clock.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_clock.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_clock.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_int.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_int.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_int.o(.rrx_text), (6 bytes).
+    Removing systemtimer.o(.rev16_text), (4 bytes).
+    Removing systemtimer.o(.revsh_text), (4 bytes).
+    Removing systemtimer.o(.rrx_text), (6 bytes).
+    Removing board_delay.o(.rev16_text), (4 bytes).
+    Removing board_delay.o(.revsh_text), (4 bytes).
+    Removing board_delay.o(.rrx_text), (6 bytes).
+    Removing board_delay.o(i.delay_init), (2 bytes).
+    Removing board_delay.o(i.delay_ms), (24 bytes).
+    Removing board_delay.o(i.delay_sec), (34 bytes).
+    Removing board_delay.o(i.delay_us), (44 bytes).
+    Removing board_led.o(.rev16_text), (4 bytes).
+    Removing board_led.o(.revsh_text), (4 bytes).
+    Removing board_led.o(.rrx_text), (6 bytes).
+    Removing board_led.o(i.BSP_LED_On), (52 bytes).
+    Removing board_led.o(i.BSP_LED_Toggle), (120 bytes).
+    Removing board_matrix.o(.rev16_text), (4 bytes).
+    Removing board_matrix.o(.revsh_text), (4 bytes).
+    Removing board_matrix.o(.rrx_text), (6 bytes).
+    Removing board_matrix.o(i.MatrixSetBrightness), (12 bytes).
+    Removing board_matrix.o(i.MatrixSetDrawRect), (44 bytes).
+    Removing board_matrix.o(i.MatrixSetRenderRect), (44 bytes).
+    Removing board_matrix.o(i.MatrixSetUpdate), (12 bytes).
+    Removing board_matrix.o(i.isMatrixBusy), (12 bytes).
+    Removing board_matrix.o(.data), (4 bytes).
+    Removing board_matrix.o(.data), (4 bytes).
+    Removing matrix_ll.o(.rev16_text), (4 bytes).
+    Removing matrix_ll.o(.revsh_text), (4 bytes).
+    Removing matrix_ll.o(.rrx_text), (6 bytes).
+    Removing matrix_ll.o(i.matrixSendOff), (48 bytes).
+    Removing system_at32f435_437.o(.rev16_text), (4 bytes).
+    Removing system_at32f435_437.o(.revsh_text), (4 bytes).
+    Removing system_at32f435_437.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_crm.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_crm.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_crm.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_crm.o(i.crm_battery_powered_domain_reset), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_clkout_div_set), (68 bytes).
+    Removing at32f435_437_crm.o(i.crm_clkout_to_tmr10_enable), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_clock_failure_detection_enable), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_clock_out1_set), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_clock_out2_set), (56 bytes).
+    Removing at32f435_437_crm.o(i.crm_emac_output_pulse_set), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_ertc_clock_enable), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_ertc_clock_select), (36 bytes).
+    Removing at32f435_437_crm.o(i.crm_flag_clear), (236 bytes).
+    Removing at32f435_437_crm.o(i.crm_hext_bypass), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_hick_clock_calibration_set), (48 bytes).
+    Removing at32f435_437_crm.o(i.crm_hick_clock_trimming_set), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_hick_divider_select), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_hick_sclk_frequency_select), (28 bytes).
+    Removing at32f435_437_crm.o(i.crm_interrupt_enable), (32 bytes).
+    Removing at32f435_437_crm.o(i.crm_interrupt_flag_get), (180 bytes).
+    Removing at32f435_437_crm.o(i.crm_lext_bypass), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_periph_lowpower_mode_enable), (76 bytes).
+    Removing at32f435_437_crm.o(i.crm_periph_reset), (76 bytes).
+    Removing at32f435_437_crm.o(i.crm_pll_parameter_calculate), (232 bytes).
+    Removing at32f435_437_crm.o(i.crm_usb_clock_div_set), (20 bytes).
+    Removing at32f435_437_crm.o(i.crm_usb_clock_source_select), (32 bytes).
+    Removing at32f435_437_gpio.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_gpio.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_gpio.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_bits_reset), (4 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_bits_set), (4 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_bits_write), (10 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_input_data_bit_read), (18 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_input_data_read), (8 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_output_data_bit_read), (18 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_output_data_read), (8 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_pin_wp_config), (18 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_pins_huge_driven_config), (18 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_port_write), (4 bytes).
+    Removing at32f435_437_gpio.o(i.gpio_reset), (256 bytes).
+    Removing at32f435_437_misc.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_misc.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_misc.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_misc.o(i.nvic_irq_disable), (44 bytes).
+    Removing at32f435_437_misc.o(i.nvic_lowpower_mode_config), (32 bytes).
+    Removing at32f435_437_misc.o(i.nvic_system_reset), (44 bytes).
+    Removing at32f435_437_misc.o(i.nvic_vector_table_set), (20 bytes).
+    Removing at32f435_437_xmc.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_xmc.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_xmc.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_ecc_get), (24 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_ext_timing_config), (44 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_flag_clear), (128 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_flag_status_get), (64 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_interrupt_enable), (164 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_interrupt_flag_status_get), (316 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nand_default_para_init), (18 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nand_ecc_enable), (44 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nand_enable), (44 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nand_init), (56 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nand_reset), (64 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nand_timing_config), (80 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nand_timing_default_para_init), (30 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nor_sram_enable), (22 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nor_sram_init), (90 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nor_sram_reset), (56 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_nor_sram_timing_config), (124 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_norsram_default_para_init), (42 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_norsram_timing_default_para_init), (56 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_pccard_default_para_init), (10 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_pccard_enable), (24 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_pccard_init), (28 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_pccard_reset), (40 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_pccard_timing_config), (84 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_pccard_timing_default_para_init), (44 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_sdram_auto_refresh_set), (24 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_sdram_cmd), (28 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_sdram_default_para_init), (50 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_sdram_init), (608 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_sdram_refresh_counter_set), (24 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_sdram_reset), (52 bytes).
+    Removing at32f435_437_xmc.o(i.xmc_sdram_status_get), (28 bytes).
+    Removing at32f435_437_usart.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_usart.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_usart.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_usart.o(i.usart_break_bit_num_set), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_break_send), (12 bytes).
+    Removing at32f435_437_usart.o(i.usart_clock_config), (28 bytes).
+    Removing at32f435_437_usart.o(i.usart_clock_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_data_receive), (8 bytes).
+    Removing at32f435_437_usart.o(i.usart_data_transmit), (8 bytes).
+    Removing at32f435_437_usart.o(i.usart_de_polarity_set), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_dma_receiver_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_dma_transmitter_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_flag_clear), (18 bytes).
+    Removing at32f435_437_usart.o(i.usart_flag_get), (16 bytes).
+    Removing at32f435_437_usart.o(i.usart_hardware_flow_control_set), (102 bytes).
+    Removing at32f435_437_usart.o(i.usart_id_bit_num_set), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_init), (172 bytes).
+    Removing at32f435_437_usart.o(i.usart_interrupt_enable), (54 bytes).
+    Removing at32f435_437_usart.o(i.usart_interrupt_flag_get), (176 bytes).
+    Removing at32f435_437_usart.o(i.usart_irda_low_power_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_irda_mode_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_irda_smartcard_division_set), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_lin_mode_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_parity_selection_config), (76 bytes).
+    Removing at32f435_437_usart.o(i.usart_receiver_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_receiver_mute_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_reset), (260 bytes).
+    Removing at32f435_437_usart.o(i.usart_rs485_delay_time_config), (18 bytes).
+    Removing at32f435_437_usart.o(i.usart_rs485_mode_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_single_line_halfduplex_select), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_smartcard_guard_time_set), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_smartcard_mode_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_smartcard_nack_set), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_transmit_receive_pin_swap), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_transmitter_enable), (10 bytes).
+    Removing at32f435_437_usart.o(i.usart_wakeup_id_set), (46 bytes).
+    Removing at32f435_437_usart.o(i.usart_wakeup_mode_set), (10 bytes).
+    Removing at32f435_437_qspi.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_qspi.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_qspi.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_busy_config), (10 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_byte_read), (8 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_byte_write), (6 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_clk_division_set), (10 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_cmd_operation_kick), (76 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_dma_enable), (10 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_dma_rx_threshold_set), (10 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_dma_tx_threshold_set), (10 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_encryption_enable), (10 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_flag_clear), (6 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_flag_get), (48 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_half_word_read), (8 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_half_word_write), (6 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_interrupt_enable), (10 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_interrupt_flag_get), (34 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_reset), (68 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_sck_mode_set), (10 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_word_read), (8 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_word_write), (6 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_xip_cache_bypass_set), (10 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_xip_enable), (124 bytes).
+    Removing at32f435_437_qspi.o(i.qspi_xip_init), (90 bytes).
+    Removing at32f435_437_i2c.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_i2c.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_i2c.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_ack_enable), (18 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_addr10_header_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_addr10_mode_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_auto_stop_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_clock_stretch_enable), (18 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_cnt_set), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_data_receive), (8 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_data_send), (4 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_dma_enable), (22 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_ext_timeout_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_ext_timeout_set), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_flag_clear), (4 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_flag_get), (16 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_general_call_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_init), (20 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_interrupt_enable), (18 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_interrupt_flag_get), (190 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_interrupt_get), (16 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_matched_addr_get), (12 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_own_address1_set), (30 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_own_address2_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_own_address2_set), (22 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_pec_calculate_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_pec_transmit_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_pec_value_get), (8 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_reload_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_reset), (100 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_slave_data_ctrl_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_smbus_alert_set), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_smbus_enable), (34 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_start_generate), (14 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_stop_generate), (14 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_timeout_detcet_set), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_timeout_enable), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_timeout_set), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_transfer_addr_get), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_transfer_addr_set), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_transfer_dir_get), (18 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_transfer_dir_set), (10 bytes).
+    Removing at32f435_437_i2c.o(i.i2c_transmit_set), (32 bytes).
+    Removing at32f435_437_dma.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_dma.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_dma.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_dma.o(i.dma_channel_enable), (10 bytes).
+    Removing at32f435_437_dma.o(i.dma_data_number_get), (8 bytes).
+    Removing at32f435_437_dma.o(i.dma_data_number_set), (4 bytes).
+    Removing at32f435_437_dma.o(i.dma_default_para_init), (24 bytes).
+    Removing at32f435_437_dma.o(i.dma_flag_clear), (32 bytes).
+    Removing at32f435_437_dma.o(i.dma_flag_get), (44 bytes).
+    Removing at32f435_437_dma.o(i.dma_flexible_config), (24 bytes).
+    Removing at32f435_437_dma.o(i.dma_init), (98 bytes).
+    Removing at32f435_437_dma.o(i.dma_interrupt_enable), (18 bytes).
+    Removing at32f435_437_dma.o(i.dma_interrupt_flag_get), (44 bytes).
+    Removing at32f435_437_dma.o(i.dma_reset), (112 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_enable), (14 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_generator_config), (44 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_generator_default_para_init), (12 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_generator_flag_clear), (6 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_generator_flag_get), (18 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_generator_interrupt_enable), (26 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_generator_interrupt_flag_get), (172 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_init), (10 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_sync_config), (54 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_sync_default_para_init), (14 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_sync_flag_clear), (6 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_sync_flag_get), (18 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_sync_interrupt_enable), (26 bytes).
+    Removing at32f435_437_dma.o(i.dmamux_sync_interrupt_flag_get), (172 bytes).
+    Removing at32f435_437_adc.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_adc.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_adc.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_adc.o(i.adc_base_config), (44 bytes).
+    Removing at32f435_437_adc.o(i.adc_base_default_para_init), (14 bytes).
+    Removing at32f435_437_adc.o(i.adc_calibration_init), (12 bytes).
+    Removing at32f435_437_adc.o(i.adc_calibration_init_status_get), (18 bytes).
+    Removing at32f435_437_adc.o(i.adc_calibration_start), (12 bytes).
+    Removing at32f435_437_adc.o(i.adc_calibration_status_get), (18 bytes).
+    Removing at32f435_437_adc.o(i.adc_calibration_value_set), (6 bytes).
+    Removing at32f435_437_adc.o(i.adc_combine_ordinary_conversion_data_get), (12 bytes).
+    Removing at32f435_437_adc.o(i.adc_common_config), (164 bytes).
+    Removing at32f435_437_adc.o(i.adc_common_default_para_init), (18 bytes).
+    Removing at32f435_437_adc.o(i.adc_conversion_stop), (12 bytes).
+    Removing at32f435_437_adc.o(i.adc_conversion_stop_status_get), (18 bytes).
+    Removing at32f435_437_adc.o(i.adc_dma_mode_enable), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_dma_request_repeat_enable), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_enable), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_flag_clear), (6 bytes).
+    Removing at32f435_437_adc.o(i.adc_flag_get), (16 bytes).
+    Removing at32f435_437_adc.o(i.adc_interrupt_enable), (22 bytes).
+    Removing at32f435_437_adc.o(i.adc_interrupt_flag_get), (108 bytes).
+    Removing at32f435_437_adc.o(i.adc_occe_each_conversion_enable), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_channel_set), (168 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_conversion_data_get), (8 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_conversion_trigger_set), (52 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_oversample_enable), (14 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_oversample_restart_set), (14 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_oversample_trig_enable), (14 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_part_count_set), (12 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_part_mode_enable), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_software_trigger_enable), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_ordinary_software_trigger_status_get), (18 bytes).
+    Removing at32f435_437_adc.o(i.adc_oversample_ratio_shift_set), (22 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_auto_mode_enable), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_channel_length_set), (12 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_channel_set), (142 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_conversion_data_get), (50 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_conversion_trigger_set), (52 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_offset_value_set), (62 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_oversample_enable), (14 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_part_mode_enable), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_software_trigger_enable), (18 bytes).
+    Removing at32f435_437_adc.o(i.adc_preempt_software_trigger_status_get), (18 bytes).
+    Removing at32f435_437_adc.o(i.adc_reset), (24 bytes).
+    Removing at32f435_437_adc.o(i.adc_resolution_set), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_voltage_battery_enable), (24 bytes).
+    Removing at32f435_437_adc.o(i.adc_voltage_monitor_enable), (32 bytes).
+    Removing at32f435_437_adc.o(i.adc_voltage_monitor_single_channel_select), (10 bytes).
+    Removing at32f435_437_adc.o(i.adc_voltage_monitor_threshold_value_set), (18 bytes).
+    Removing at32f435_437_tmr.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_tmr.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_tmr.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_32_bit_function_enable), (28 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_brkdt_config), (72 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_brkdt_default_para_init), (18 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_channel1_input_select), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_channel_buffer_enable), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_channel_dma_select), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_channel_enable), (96 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_channel_value_get), (50 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_counter_enable), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_counter_value_get), (6 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_counter_value_set), (4 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_div_value_get), (6 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_div_value_set), (4 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_dma_control_config), (18 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_dma_request_enable), (22 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_encoder_mode_config), (70 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_event_sw_trigger), (8 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_external_clock_config), (28 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_external_clock_mode1_config), (44 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_external_clock_mode2_config), (36 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_force_output_set), (76 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_hall_select), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_input_channel_divider_set), (66 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_input_channel_filter_set), (66 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_input_channel_init), (304 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_input_default_para_init), (16 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_internal_clock_set), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_interrupt_flag_get), (24 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_iremap_config), (36 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_one_cycle_mode_enable), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_output_channel_buffer_enable), (76 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_output_channel_immediately_set), (76 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_output_channel_mode_select), (76 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_output_channel_polarity_set), (96 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_output_channel_switch_set), (76 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_output_enable), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_overflow_event_disable), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_overflow_request_source_set), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_period_value_get), (6 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_period_value_set), (4 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_pwm_input_config), (350 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_repetition_counter_set), (10 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_reset), (480 bytes).
+    Removing at32f435_437_tmr.o(i.tmr_trgout2_enable), (10 bytes).
+    Removing at32f435_437_exint.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_exint.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_exint.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_exint.o(i.exint_default_para_init), (14 bytes).
+    Removing at32f435_437_exint.o(i.exint_event_enable), (32 bytes).
+    Removing at32f435_437_exint.o(i.exint_flag_clear), (12 bytes).
+    Removing at32f435_437_exint.o(i.exint_flag_get), (28 bytes).
+    Removing at32f435_437_exint.o(i.exint_init), (152 bytes).
+    Removing at32f435_437_exint.o(i.exint_interrupt_enable), (32 bytes).
+    Removing at32f435_437_exint.o(i.exint_interrupt_flag_get), (36 bytes).
+    Removing at32f435_437_exint.o(i.exint_reset), (40 bytes).
+    Removing at32f435_437_exint.o(i.exint_software_interrupt_event_generate), (16 bytes).
+    Removing at32f435_437_scfg.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_scfg.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_scfg.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_scfg.o(i.scfg_emac_interface_set), (20 bytes).
+    Removing at32f435_437_scfg.o(i.scfg_exint_line_config), (180 bytes).
+    Removing at32f435_437_scfg.o(i.scfg_infrared_config), (28 bytes).
+    Removing at32f435_437_scfg.o(i.scfg_mem_map_set), (20 bytes).
+    Removing at32f435_437_scfg.o(i.scfg_pins_ultra_driven_enable), (76 bytes).
+    Removing at32f435_437_scfg.o(i.scfg_reset), (24 bytes).
+    Removing at32f435_437_scfg.o(i.scfg_xmc_mapping_swap_set), (20 bytes).
+    Removing at32f435_437_usb.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_usb.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_usb.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_usb.o(i.usb_connect), (18 bytes).
+    Removing at32f435_437_usb.o(i.usb_disconnect), (20 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept0_setup), (34 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept0_start), (44 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept_clear_stall), (146 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept_close), (100 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept_in_clear), (12 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept_in_interrupt), (44 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept_open), (416 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept_out_clear), (12 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept_out_interrupt), (22 bytes).
+    Removing at32f435_437_usb.o(i.usb_ept_stall), (146 bytes).
+    Removing at32f435_437_usb.o(i.usb_flush_rx_fifo), (44 bytes).
+    Removing at32f435_437_usb.o(i.usb_flush_tx_fifo), (56 bytes).
+    Removing at32f435_437_usb.o(i.usb_get_all_in_interrupt), (18 bytes).
+    Removing at32f435_437_usb.o(i.usb_get_all_out_interrupt), (18 bytes).
+    Removing at32f435_437_usb.o(i.usb_global_clear_interrupt), (4 bytes).
+    Removing at32f435_437_usb.o(i.usb_global_get_all_interrupt), (10 bytes).
+    Removing at32f435_437_usb.o(i.usb_global_init), (24 bytes).
+    Removing at32f435_437_usb.o(i.usb_global_interrupt_enable), (20 bytes).
+    Removing at32f435_437_usb.o(i.usb_global_power_on), (36 bytes).
+    Removing at32f435_437_usb.o(i.usb_global_reset), (76 bytes).
+    Removing at32f435_437_usb.o(i.usb_global_select_core), (20 bytes).
+    Removing at32f435_437_usb.o(i.usb_global_set_mode), (68 bytes).
+    Removing at32f435_437_usb.o(i.usb_hc_enable), (276 bytes).
+    Removing at32f435_437_usb.o(i.usb_hch_halt), (196 bytes).
+    Removing at32f435_437_usb.o(i.usb_hch_read_interrupt), (12 bytes).
+    Removing at32f435_437_usb.o(i.usb_host_disable), (180 bytes).
+    Removing at32f435_437_usb.o(i.usb_interrupt_disable), (10 bytes).
+    Removing at32f435_437_usb.o(i.usb_interrupt_enable), (12 bytes).
+    Removing at32f435_437_usb.o(i.usb_open_phy_clk), (14 bytes).
+    Removing at32f435_437_usb.o(i.usb_port_power_on), (36 bytes).
+    Removing at32f435_437_usb.o(i.usb_read_packet), (42 bytes).
+    Removing at32f435_437_usb.o(i.usb_remote_wkup_clear), (18 bytes).
+    Removing at32f435_437_usb.o(i.usb_remote_wkup_set), (20 bytes).
+    Removing at32f435_437_usb.o(i.usb_set_address), (14 bytes).
+    Removing at32f435_437_usb.o(i.usb_set_rx_fifo), (4 bytes).
+    Removing at32f435_437_usb.o(i.usb_set_tx_fifo), (66 bytes).
+    Removing at32f435_437_usb.o(i.usb_stop_phy_clk), (16 bytes).
+    Removing at32f435_437_usb.o(i.usb_suspend_status_get), (14 bytes).
+    Removing at32f435_437_usb.o(i.usb_write_packet), (48 bytes).
+    Removing at32f435_437_usb.o(i.usbh_fsls_clksel), (34 bytes).
+    Removing at32f435_437_usb.o(i.usbh_get_frame), (12 bytes).
+    Removing at32f435_437_acc.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_acc.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_acc.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_acc.o(i.acc_calibration_mode_enable), (48 bytes).
+    Removing at32f435_437_acc.o(i.acc_flag_clear), (12 bytes).
+    Removing at32f435_437_acc.o(i.acc_flag_get), (32 bytes).
+    Removing at32f435_437_acc.o(i.acc_hickcal_get), (12 bytes).
+    Removing at32f435_437_acc.o(i.acc_hicktrim_get), (16 bytes).
+    Removing at32f435_437_acc.o(i.acc_interrupt_enable), (36 bytes).
+    Removing at32f435_437_acc.o(i.acc_interrupt_flag_get), (72 bytes).
+    Removing at32f435_437_acc.o(i.acc_read_c1), (12 bytes).
+    Removing at32f435_437_acc.o(i.acc_read_c2), (12 bytes).
+    Removing at32f435_437_acc.o(i.acc_read_c3), (12 bytes).
+    Removing at32f435_437_acc.o(i.acc_sof_select), (16 bytes).
+    Removing at32f435_437_acc.o(i.acc_step_set), (20 bytes).
+    Removing at32f435_437_acc.o(i.acc_write_c1), (12 bytes).
+    Removing at32f435_437_acc.o(i.acc_write_c2), (12 bytes).
+    Removing at32f435_437_acc.o(i.acc_write_c3), (12 bytes).
+    Removing at32f435_437_spi.o(.rev16_text), (4 bytes).
+    Removing at32f435_437_spi.o(.revsh_text), (4 bytes).
+    Removing at32f435_437_spi.o(.rrx_text), (6 bytes).
+    Removing at32f435_437_spi.o(i.i2s_default_para_init), (22 bytes).
+    Removing at32f435_437_spi.o(i.i2s_enable), (10 bytes).
+    Removing at32f435_437_spi.o(i.i2s_init), (550 bytes).
+    Removing at32f435_437_spi.o(i.spi_crc_enable), (10 bytes).
+    Removing at32f435_437_spi.o(i.spi_crc_next_transmit), (14 bytes).
+    Removing at32f435_437_spi.o(i.spi_crc_polynomial_get), (8 bytes).
+    Removing at32f435_437_spi.o(i.spi_crc_polynomial_set), (10 bytes).
+    Removing at32f435_437_spi.o(i.spi_crc_value_get), (18 bytes).
+    Removing at32f435_437_spi.o(i.spi_default_para_init), (22 bytes).
+    Removing at32f435_437_spi.o(i.spi_enable), (10 bytes).
+    Removing at32f435_437_spi.o(i.spi_frame_bit_num_set), (10 bytes).
+    Removing at32f435_437_spi.o(i.spi_half_duplex_direction_set), (10 bytes).
+    Removing at32f435_437_spi.o(i.spi_hardware_cs_output_enable), (10 bytes).
+    Removing at32f435_437_spi.o(i.spi_i2s_data_receive), (8 bytes).
+    Removing at32f435_437_spi.o(i.spi_i2s_data_transmit), (4 bytes).
+    Removing at32f435_437_spi.o(i.spi_i2s_dma_receiver_enable), (10 bytes).
+    Removing at32f435_437_spi.o(i.spi_i2s_dma_transmitter_enable), (10 bytes).
+    Removing at32f435_437_spi.o(i.spi_i2s_flag_clear), (58 bytes).
+    Removing at32f435_437_spi.o(i.spi_i2s_flag_get), (16 bytes).
+    Removing at32f435_437_spi.o(i.spi_i2s_interrupt_enable), (18 bytes).
+    Removing at32f435_437_spi.o(i.spi_i2s_interrupt_flag_get), (186 bytes).
+    Removing at32f435_437_spi.o(i.spi_i2s_reset), (132 bytes).
+    Removing at32f435_437_spi.o(i.spi_init), (344 bytes).
+    Removing at32f435_437_spi.o(i.spi_software_cs_internal_level_set), (10 bytes).
+    Removing at32f435_437_spi.o(i.spi_ti_mode_enable), (10 bytes).
+
+469 unused section(s) (total 17592 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/longlong.s                       0x00000000   Number         0  lludivv7m.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ..\Core\Src\SystemTimer.c                0x00000000   Number         0  systemtimer.o ABSOLUTE
+    ..\Core\Src\at32f435_437_clock.c         0x00000000   Number         0  at32f435_437_clock.o ABSOLUTE
+    ..\Core\Src\at32f435_437_int.c           0x00000000   Number         0  at32f435_437_int.o ABSOLUTE
+    ..\Core\Src\main.c                       0x00000000   Number         0  main.o ABSOLUTE
+    ..\Drivers\BSP\board\board_delay.c       0x00000000   Number         0  board_delay.o ABSOLUTE
+    ..\Drivers\BSP\board\board_led.c         0x00000000   Number         0  board_led.o ABSOLUTE
+    ..\Drivers\BSP\board\board_matrix\board_matrix.c 0x00000000   Number         0  board_matrix.o ABSOLUTE
+    ..\Drivers\BSP\board\board_matrix\matrix_ll.c 0x00000000   Number         0  matrix_ll.o ABSOLUTE
+    ..\Drivers\cmsis\cm4\device_support\system_at32f435_437.c 0x00000000   Number         0  system_at32f435_437.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_acc.c 0x00000000   Number         0  at32f435_437_acc.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_adc.c 0x00000000   Number         0  at32f435_437_adc.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_crm.c 0x00000000   Number         0  at32f435_437_crm.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_dma.c 0x00000000   Number         0  at32f435_437_dma.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_exint.c 0x00000000   Number         0  at32f435_437_exint.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_gpio.c 0x00000000   Number         0  at32f435_437_gpio.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_i2c.c 0x00000000   Number         0  at32f435_437_i2c.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_misc.c 0x00000000   Number         0  at32f435_437_misc.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_qspi.c 0x00000000   Number         0  at32f435_437_qspi.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_scfg.c 0x00000000   Number         0  at32f435_437_scfg.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_spi.c 0x00000000   Number         0  at32f435_437_spi.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_tmr.c 0x00000000   Number         0  at32f435_437_tmr.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_usart.c 0x00000000   Number         0  at32f435_437_usart.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_usb.c 0x00000000   Number         0  at32f435_437_usb.o ABSOLUTE
+    ..\Drivers\drivers\src\at32f435_437_xmc.c 0x00000000   Number         0  at32f435_437_xmc.o ABSOLUTE
+    ..\\Core\\Src\\SystemTimer.c             0x00000000   Number         0  systemtimer.o ABSOLUTE
+    ..\\Core\\Src\\at32f435_437_clock.c      0x00000000   Number         0  at32f435_437_clock.o ABSOLUTE
+    ..\\Core\\Src\\at32f435_437_int.c        0x00000000   Number         0  at32f435_437_int.o ABSOLUTE
+    ..\\Core\\Src\\main.c                    0x00000000   Number         0  main.o ABSOLUTE
+    ..\\Drivers\\BSP\\board\\board_delay.c   0x00000000   Number         0  board_delay.o ABSOLUTE
+    ..\\Drivers\\BSP\\board\\board_led.c     0x00000000   Number         0  board_led.o ABSOLUTE
+    ..\\Drivers\\BSP\\board\\board_matrix\\board_matrix.c 0x00000000   Number         0  board_matrix.o ABSOLUTE
+    ..\\Drivers\\BSP\\board\\board_matrix\\matrix_ll.c 0x00000000   Number         0  matrix_ll.o ABSOLUTE
+    ..\\Drivers\\cmsis\\cm4\\device_support\\system_at32f435_437.c 0x00000000   Number         0  system_at32f435_437.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_acc.c 0x00000000   Number         0  at32f435_437_acc.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_adc.c 0x00000000   Number         0  at32f435_437_adc.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_crm.c 0x00000000   Number         0  at32f435_437_crm.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_dma.c 0x00000000   Number         0  at32f435_437_dma.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_exint.c 0x00000000   Number         0  at32f435_437_exint.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_gpio.c 0x00000000   Number         0  at32f435_437_gpio.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_i2c.c 0x00000000   Number         0  at32f435_437_i2c.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_misc.c 0x00000000   Number         0  at32f435_437_misc.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_qspi.c 0x00000000   Number         0  at32f435_437_qspi.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_scfg.c 0x00000000   Number         0  at32f435_437_scfg.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_spi.c 0x00000000   Number         0  at32f435_437_spi.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_tmr.c 0x00000000   Number         0  at32f435_437_tmr.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_usart.c 0x00000000   Number         0  at32f435_437_usart.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_usb.c 0x00000000   Number         0  at32f435_437_usb.o ABSOLUTE
+    ..\\Drivers\\drivers\\src\\at32f435_437_xmc.c 0x00000000   Number         0  at32f435_437_xmc.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    startup_at32f435_437.s                   0x00000000   Number         0  startup_at32f435_437.o ABSOLUTE
+    RESET                                    0x08000000   Section      524  startup_at32f435_437.o(RESET)
+    !!!main                                  0x0800020c   Section        8  __main.o(!!!main)
+    !!!scatter                               0x08000214   Section       52  __scatter.o(!!!scatter)
+    !!handler_copy                           0x08000248   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_zi                             0x08000264   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x08000280   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000001          0x08000282   Section        4  libinit2.o(.ARM.Collect$$libinit$$00000001)
+    .ARM.Collect$$libinit$$00000004          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x08000286   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x08000286   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x08000288   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x0800028a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x0800028a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000006      0x0800028a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    .ARM.Collect$$libshutdown$$00000009      0x0800028a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    .ARM.Collect$$libshutdown$$0000000C      0x0800028a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000E      0x0800028a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    .ARM.Collect$$libshutdown$$00000011      0x0800028a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000011)
+    .ARM.Collect$$libshutdown$$00000012      0x0800028a   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000012)
+    .ARM.Collect$$rtentry$$00000000          0x0800028c   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x0800028c   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x0800028c   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x08000292   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x08000292   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x08000296   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x08000296   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x0800029e   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x080002a0   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x080002a0   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x080002a4   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x080002ac   Section       64  startup_at32f435_437.o(.text)
+    $v0                                      0x080002ac   Number         0  startup_at32f435_437.o(.text)
+    .text                                    0x080002ec   Section      238  lludivv7m.o(.text)
+    .text                                    0x080003da   Section       68  rt_memclr.o(.text)
+    .text                                    0x0800041e   Section        0  heapauxi.o(.text)
+    .text                                    0x08000424   Section       78  rt_memclr_w.o(.text)
+    .text                                    0x08000472   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x080004bc   Section        0  exit.o(.text)
+    .text                                    0x080004d0   Section        8  libspace.o(.text)
+    .text                                    0x080004d8   Section        0  sys_exit.o(.text)
+    .text                                    0x080004e4   Section        2  use_no_semi.o(.text)
+    .text                                    0x080004e6   Section        0  indicate_semi.o(.text)
+    i.BSP_LED_Init                           0x080004e8   Section        0  board_led.o(i.BSP_LED_Init)
+    i.BSP_LED_Off                            0x08000558   Section        0  board_led.o(i.BSP_LED_Off)
+    i.BusFault_Handler                       0x0800058c   Section        0  at32f435_437_int.o(i.BusFault_Handler)
+    i.DebugMon_Handler                       0x08000590   Section        0  at32f435_437_int.o(i.DebugMon_Handler)
+    i.DoSomething                            0x08000594   Section        0  main.o(i.DoSomething)
+    DoSomething                              0x08000595   Thumb Code   678  main.o(i.DoSomething)
+    i.HardFault_Handler                      0x08000844   Section        0  at32f435_437_int.o(i.HardFault_Handler)
+    i.MatrixDrawPixel                        0x08000848   Section        0  board_matrix.o(i.MatrixDrawPixel)
+    i.MatrixDrawRect                         0x08000a20   Section        0  board_matrix.o(i.MatrixDrawRect)
+    i.MatrixRenderRect                       0x08000ba0   Section        0  board_matrix.o(i.MatrixRenderRect)
+    i.Matrix_Init                            0x08000ce0   Section        0  board_matrix.o(i.Matrix_Init)
+    i.Matrix_Periodic_Handler                0x08000da0   Section        0  board_matrix.o(i.Matrix_Periodic_Handler)
+    i.MemManage_Handler                      0x08000f8c   Section        0  at32f435_437_int.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x08000f90   Section        0  at32f435_437_int.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x08000f92   Section        0  at32f435_437_int.o(i.PendSV_Handler)
+    i.SVC_Handler                            0x08000f94   Section        0  at32f435_437_int.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x08000f96   Section        0  at32f435_437_int.o(i.SysTick_Handler)
+    i.SystemInit                             0x08000fa0   Section        0  system_at32f435_437.o(i.SystemInit)
+    i.SystemTimer_Config                     0x08001030   Section        0  systemtimer.o(i.SystemTimer_Config)
+    i.SystemTimer_GetTick                    0x08001094   Section        0  systemtimer.o(i.SystemTimer_GetTick)
+    i.SystemTimer_IncTick                    0x080010a0   Section        0  systemtimer.o(i.SystemTimer_IncTick)
+    i.System_Periodic_Handle                 0x080010b0   Section        0  main.o(i.System_Periodic_Handle)
+    System_Periodic_Handle                   0x080010b1   Thumb Code    12  main.o(i.System_Periodic_Handle)
+    i.TMR5_GLOBAL_IRQHandler                 0x080010bc   Section        0  matrix_ll.o(i.TMR5_GLOBAL_IRQHandler)
+    i.TMR8_OVF_TMR13_IRQHandler              0x080010f0   Section        0  matrix_ll.o(i.TMR8_OVF_TMR13_IRQHandler)
+    i.UsageFault_Handler                     0x080011a8   Section        0  at32f435_437_int.o(i.UsageFault_Handler)
+    i.crm_ahb_div_set                        0x080011ac   Section        0  at32f435_437_crm.o(i.crm_ahb_div_set)
+    i.crm_apb1_div_set                       0x080011c0   Section        0  at32f435_437_crm.o(i.crm_apb1_div_set)
+    i.crm_apb2_div_set                       0x080011d4   Section        0  at32f435_437_crm.o(i.crm_apb2_div_set)
+    i.crm_auto_step_mode_enable              0x080011e8   Section        0  at32f435_437_crm.o(i.crm_auto_step_mode_enable)
+    i.crm_clock_source_enable                0x08001210   Section        0  at32f435_437_crm.o(i.crm_clock_source_enable)
+    i.crm_clocks_freq_get                    0x08001278   Section        0  at32f435_437_crm.o(i.crm_clocks_freq_get)
+    i.crm_flag_get                           0x08001388   Section        0  at32f435_437_crm.o(i.crm_flag_get)
+    i.crm_hext_stable_wait                   0x080013b8   Section        0  at32f435_437_crm.o(i.crm_hext_stable_wait)
+    i.crm_periph_clock_enable                0x080013e8   Section        0  at32f435_437_crm.o(i.crm_periph_clock_enable)
+    i.crm_pll_config                         0x08001434   Section        0  at32f435_437_crm.o(i.crm_pll_config)
+    i.crm_reset                              0x0800147c   Section        0  at32f435_437_crm.o(i.crm_reset)
+    i.crm_sysclk_switch                      0x080014f4   Section        0  at32f435_437_crm.o(i.crm_sysclk_switch)
+    i.crm_sysclk_switch_status_get           0x08001530   Section        0  at32f435_437_crm.o(i.crm_sysclk_switch_status_get)
+    i.gpio_default_para_init                 0x08001540   Section        0  at32f435_437_gpio.o(i.gpio_default_para_init)
+    i.gpio_init                              0x08001554   Section        0  at32f435_437_gpio.o(i.gpio_init)
+    i.gpio_pin_mux_config                    0x080015ce   Section        0  at32f435_437_gpio.o(i.gpio_pin_mux_config)
+    i.main                                   0x08001610   Section        0  main.o(i.main)
+    i.matrixDelay                            0x08001644   Section        0  matrix_ll.o(i.matrixDelay)
+    i.matrixDelaySignal                      0x08001652   Section        0  matrix_ll.o(i.matrixDelaySignal)
+    matrixDelaySignal                        0x08001653   Thumb Code    16  matrix_ll.o(i.matrixDelaySignal)
+    i.matrixFrameSwap                        0x08001664   Section        0  matrix_ll.o(i.matrixFrameSwap)
+    i.matrixInit                             0x08001670   Section        0  matrix_ll.o(i.matrixInit)
+    i.matrixPwmStart                         0x08001870   Section        0  matrix_ll.o(i.matrixPwmStart)
+    i.matrixSendClock                        0x08001880   Section        0  matrix_ll.o(i.matrixSendClock)
+    i.matrixSendConfReg                      0x0800189c   Section        0  matrix_ll.o(i.matrixSendConfReg)
+    i.matrixSendOn                           0x08001934   Section        0  matrix_ll.o(i.matrixSendOn)
+    i.matrixSendPreAct                       0x08001964   Section        0  matrix_ll.o(i.matrixSendPreAct)
+    i.matrixSendVerticalSync                 0x08001994   Section        0  matrix_ll.o(i.matrixSendVerticalSync)
+    i.matrixSetLatHi                         0x080019c4   Section        0  matrix_ll.o(i.matrixSetLatHi)
+    i.matrixSetLatLow                        0x080019d0   Section        0  matrix_ll.o(i.matrixSetLatLow)
+    i.matrixVerticalSync                     0x080019dc   Section        0  matrix_ll.o(i.matrixVerticalSync)
+    i.nvic_irq_enable                        0x080019f0   Section        0  at32f435_437_misc.o(i.nvic_irq_enable)
+    i.nvic_priority_group_config             0x08001ab8   Section        0  at32f435_437_misc.o(i.nvic_priority_group_config)
+    i.system_clock_config                    0x08001ae0   Section        0  at32f435_437_clock.o(i.system_clock_config)
+    i.system_core_clock_update               0x08001b7c   Section        0  system_at32f435_437.o(i.system_core_clock_update)
+    i.systick_clock_source_config            0x08001c6c   Section        0  at32f435_437_misc.o(i.systick_clock_source_config)
+    i.tmr_base_init                          0x08001c94   Section        0  at32f435_437_tmr.o(i.tmr_base_init)
+    i.tmr_channel_value_set                  0x08001ca4   Section        0  at32f435_437_tmr.o(i.tmr_channel_value_set)
+    i.tmr_clock_source_div_set               0x08001cd2   Section        0  at32f435_437_tmr.o(i.tmr_clock_source_div_set)
+    i.tmr_cnt_dir_set                        0x08001cdc   Section        0  at32f435_437_tmr.o(i.tmr_cnt_dir_set)
+    i.tmr_flag_clear                         0x08001ce6   Section        0  at32f435_437_tmr.o(i.tmr_flag_clear)
+    i.tmr_flag_get                           0x08001cec   Section        0  at32f435_437_tmr.o(i.tmr_flag_get)
+    i.tmr_interrupt_enable                   0x08001cfe   Section        0  at32f435_437_tmr.o(i.tmr_interrupt_enable)
+    i.tmr_output_channel_config              0x08001d14   Section        0  at32f435_437_tmr.o(i.tmr_output_channel_config)
+    i.tmr_output_default_para_init           0x08001ec6   Section        0  at32f435_437_tmr.o(i.tmr_output_default_para_init)
+    i.tmr_period_buffer_enable               0x08001ed8   Section        0  at32f435_437_tmr.o(i.tmr_period_buffer_enable)
+    i.tmr_primary_mode_select                0x08001ee2   Section        0  at32f435_437_tmr.o(i.tmr_primary_mode_select)
+    i.tmr_sub_mode_select                    0x08001eec   Section        0  at32f435_437_tmr.o(i.tmr_sub_mode_select)
+    i.tmr_sub_sync_mode_set                  0x08001ef6   Section        0  at32f435_437_tmr.o(i.tmr_sub_sync_mode_set)
+    i.tmr_trigger_input_select               0x08001f00   Section        0  at32f435_437_tmr.o(i.tmr_trigger_input_select)
+    x$fpl$fpinit                             0x08001f0a   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x08001f0a   Number         0  fpinit.o(x$fpl$fpinit)
+    .constdata                               0x08001f14   Section      192  board_matrix.o(.constdata)
+    LUT_5                                    0x08001f14   Data          64  board_matrix.o(.constdata)
+    LUT_6                                    0x08001f54   Data         128  board_matrix.o(.constdata)
+    .constdata                               0x08001fd4   Section       22  system_at32f435_437.o(.constdata)
+    sys_ahb_div_table                        0x08001fd4   Data          16  system_at32f435_437.o(.constdata)
+    pll_fr_table                             0x08001fe4   Data           6  system_at32f435_437.o(.constdata)
+    .constdata                               0x08001fea   Section       38  at32f435_437_crm.o(.constdata)
+    sclk_ahb_div_table                       0x08001fea   Data          16  at32f435_437_crm.o(.constdata)
+    ahb_apb1_div_table                       0x08001ffa   Data           8  at32f435_437_crm.o(.constdata)
+    ahb_apb2_div_table                       0x08002002   Data           8  at32f435_437_crm.o(.constdata)
+    pll_fr_table                             0x0800200a   Data           6  at32f435_437_crm.o(.constdata)
+    .data                                    0x20000000   Section        6  main.o(.data)
+    step                                     0x20000004   Data           2  main.o(.data)
+    .data                                    0x20000008   Section        4  systemtimer.o(.data)
+    .data                                    0x2000000c   Section       52  board_matrix.o(.data)
+    updateMatrix                             0x2000000c   Data           1  board_matrix.o(.data)
+    newTask                                  0x2000000d   Data           1  board_matrix.o(.data)
+    outputmask                               0x2000000e   Data           1  board_matrix.o(.data)
+    rgb                                      0x2000000f   Data           1  board_matrix.o(.data)
+    x_byte                                   0x20000010   Data           1  board_matrix.o(.data)
+    newBright                                0x20000012   Data           2  board_matrix.o(.data)
+    currentBright                            0x20000014   Data           2  board_matrix.o(.data)
+    _x_start                                 0x20000016   Data           2  board_matrix.o(.data)
+    _y_start                                 0x20000018   Data           2  board_matrix.o(.data)
+    _x_end                                   0x2000001a   Data           2  board_matrix.o(.data)
+    _y_end                                   0x2000001c   Data           2  board_matrix.o(.data)
+    _color565                                0x2000001e   Data           2  board_matrix.o(.data)
+    red16Bit                                 0x20000020   Data           2  board_matrix.o(.data)
+    green16Bit                               0x20000022   Data           2  board_matrix.o(.data)
+    blue16Bit                                0x20000024   Data           2  board_matrix.o(.data)
+    bufferPos                                0x20000026   Data           2  board_matrix.o(.data)
+    inputMask                                0x20000028   Data           2  board_matrix.o(.data)
+    x_pos                                    0x2000002a   Data           2  board_matrix.o(.data)
+    y_pos                                    0x2000002c   Data           2  board_matrix.o(.data)
+    color565                                 0x2000002e   Data           2  board_matrix.o(.data)
+    matrixTime                               0x20000030   Data           4  board_matrix.o(.data)
+    matrixReInitTime                         0x20000034   Data           4  board_matrix.o(.data)
+    _buff                                    0x20000038   Data           4  board_matrix.o(.data)
+    pBuff                                    0x2000003c   Data           4  board_matrix.o(.data)
+    .data                                    0x20000040   Section       40  matrix_ll.o(.data)
+    .data                                    0x20000068   Section        2  matrix_ll.o(.data)
+    scanLine                                 0x20000068   Data           1  matrix_ll.o(.data)
+    flag                                     0x20000069   Data           1  matrix_ll.o(.data)
+    .data                                    0x2000006c   Section        4  system_at32f435_437.o(.data)
+    .bss                                     0x20000070   Section       28  main.o(.bss)
+    .bss                                     0x2000008c   Section    32768  board_matrix.o(.bss)
+    screenBuffer                             0x2000008c   Data       32768  board_matrix.o(.bss)
+    .bss                                     0x2000808c   Section       96  libspace.o(.bss)
+    HEAP                                     0x200080f0   Section     8192  startup_at32f435_437.o(HEAP)
+    Heap_Mem                                 0x200080f0   Data        8192  startup_at32f435_437.o(HEAP)
+    STACK                                    0x2000a0f0   Section     2048  startup_at32f435_437.o(STACK)
+    Stack_Mem                                0x2000a0f0   Data        2048  startup_at32f435_437.o(STACK)
+    __initial_sp                             0x2000a8f0   Data           0  startup_at32f435_437.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_fini_                               - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x0000020c   Number         0  startup_at32f435_437.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_at32f435_437.o(RESET)
+    __Vectors_End                            0x0800020c   Data           0  startup_at32f435_437.o(RESET)
+    __main                                   0x0800020d   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x08000215   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x08000215   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x08000215   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x08000223   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x08000249   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_zeroinit                   0x08000265   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x08000281   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_fp_1                       0x08000283   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000001)
+    __rt_lib_init_alloca_1                   0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_trap_1                  0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x08000287   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x08000289   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x0800028b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_fini_1                 0x0800028b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x0800028b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    __rt_lib_shutdown_heap_1                 0x0800028b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000011)
+    __rt_lib_shutdown_return                 0x0800028b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000012)
+    __rt_lib_shutdown_signal_1               0x0800028b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_lib_shutdown_stdio_1                0x0800028b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    __rt_lib_shutdown_user_alloc_1           0x0800028b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    __rt_entry                               0x0800028d   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x0800028d   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x0800028d   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x08000293   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x08000293   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x08000297   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x08000297   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x0800029f   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x080002a1   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x080002a1   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x080002a5   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x080002ad   Thumb Code     8  startup_at32f435_437.o(.text)
+    ACC_IRQHandler                           0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    ADC1_2_3_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    CAN1_RX0_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    CAN1_RX1_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    CAN1_SE_IRQHandler                       0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    CAN1_TX_IRQHandler                       0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    CAN2_RX0_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    CAN2_RX1_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    CAN2_SE_IRQHandler                       0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    CAN2_TX_IRQHandler                       0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    CRM_IRQHandler                           0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA1_Channel1_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA1_Channel2_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA1_Channel3_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA1_Channel4_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA1_Channel5_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA1_Channel6_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA1_Channel7_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA2_Channel1_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA2_Channel2_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA2_Channel3_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA2_Channel4_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA2_Channel5_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA2_Channel6_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMA2_Channel7_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DMAMUX_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    DVP_IRQHandler                           0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EDMA_Stream1_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EDMA_Stream2_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EDMA_Stream3_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EDMA_Stream4_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EDMA_Stream5_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EDMA_Stream6_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EDMA_Stream7_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EDMA_Stream8_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EMAC_IRQHandler                          0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EMAC_WKUP_IRQHandler                     0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    ERTCAlarm_IRQHandler                     0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    ERTC_WKUP_IRQHandler                     0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EXINT0_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EXINT15_10_IRQHandler                    0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EXINT1_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EXINT2_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EXINT3_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EXINT4_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    EXINT9_5_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    FLASH_IRQHandler                         0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    FPU_IRQHandler                           0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    I2C1_ERR_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    I2C1_EVT_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    I2C2_ERR_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    I2C2_EVT_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    I2C3_ERR_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    I2C3_EVT_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    OTGFS1_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    OTGFS1_WKUP_IRQHandler                   0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    OTGFS2_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    OTGFS2_WKUP_IRQHandler                   0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    PVM_IRQHandler                           0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    QSPI1_IRQHandler                         0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    QSPI2_IRQHandler                         0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    SDIO1_IRQHandler                         0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    SDIO2_IRQHandler                         0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    SPI1_IRQHandler                          0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    SPI2_I2S2EXT_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    SPI3_I2S3EXT_IRQHandler                  0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    SPI4_IRQHandler                          0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TAMP_STAMP_IRQHandler                    0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR1_BRK_TMR9_IRQHandler                 0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR1_CH_IRQHandler                       0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR1_OVF_TMR10_IRQHandler                0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR1_TRG_HALL_TMR11_IRQHandler           0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR20_BRK_IRQHandler                     0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR20_CH_IRQHandler                      0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR20_OVF_IRQHandler                     0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR20_TRG_HALL_IRQHandler                0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR2_GLOBAL_IRQHandler                   0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR3_GLOBAL_IRQHandler                   0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR4_GLOBAL_IRQHandler                   0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR6_DAC_GLOBAL_IRQHandler               0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR7_GLOBAL_IRQHandler                   0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR8_BRK_TMR12_IRQHandler                0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR8_CH_IRQHandler                       0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    TMR8_TRG_HALL_TMR14_IRQHandler           0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    UART4_IRQHandler                         0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    UART5_IRQHandler                         0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    UART7_IRQHandler                         0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    UART8_IRQHandler                         0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    USART1_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    USART2_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    USART3_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    USART6_IRQHandler                        0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    WWDT_IRQHandler                          0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    XMC_IRQHandler                           0x080002c7   Thumb Code     0  startup_at32f435_437.o(.text)
+    __user_initial_stackheap                 0x080002c9   Thumb Code     0  startup_at32f435_437.o(.text)
+    __aeabi_uldivmod                         0x080002ed   Thumb Code     0  lludivv7m.o(.text)
+    _ll_udiv                                 0x080002ed   Thumb Code   238  lludivv7m.o(.text)
+    __aeabi_memclr                           0x080003db   Thumb Code     0  rt_memclr.o(.text)
+    __rt_memclr                              0x080003db   Thumb Code    68  rt_memclr.o(.text)
+    _memset                                  0x080003df   Thumb Code     0  rt_memclr.o(.text)
+    __use_two_region_memory                  0x0800041f   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x08000421   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08000423   Thumb Code     2  heapauxi.o(.text)
+    __aeabi_memclr4                          0x08000425   Thumb Code     0  rt_memclr_w.o(.text)
+    __aeabi_memclr8                          0x08000425   Thumb Code     0  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x08000425   Thumb Code    78  rt_memclr_w.o(.text)
+    _memset_w                                0x08000429   Thumb Code     0  rt_memclr_w.o(.text)
+    __user_setup_stackheap                   0x08000473   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x080004bd   Thumb Code    18  exit.o(.text)
+    __user_libspace                          0x080004d1   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x080004d1   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x080004d1   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x080004d9   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x080004e5   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x080004e5   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x080004e7   Thumb Code     0  indicate_semi.o(.text)
+    BSP_LED_Init                             0x080004e9   Thumb Code   104  board_led.o(i.BSP_LED_Init)
+    BSP_LED_Off                              0x08000559   Thumb Code    48  board_led.o(i.BSP_LED_Off)
+    BusFault_Handler                         0x0800058d   Thumb Code     4  at32f435_437_int.o(i.BusFault_Handler)
+    DebugMon_Handler                         0x08000591   Thumb Code     2  at32f435_437_int.o(i.DebugMon_Handler)
+    HardFault_Handler                        0x08000845   Thumb Code     4  at32f435_437_int.o(i.HardFault_Handler)
+    MatrixDrawPixel                          0x08000849   Thumb Code   460  board_matrix.o(i.MatrixDrawPixel)
+    MatrixDrawRect                           0x08000a21   Thumb Code   372  board_matrix.o(i.MatrixDrawRect)
+    MatrixRenderRect                         0x08000ba1   Thumb Code   308  board_matrix.o(i.MatrixRenderRect)
+    Matrix_Init                              0x08000ce1   Thumb Code   174  board_matrix.o(i.Matrix_Init)
+    Matrix_Periodic_Handler                  0x08000da1   Thumb Code   472  board_matrix.o(i.Matrix_Periodic_Handler)
+    MemManage_Handler                        0x08000f8d   Thumb Code     4  at32f435_437_int.o(i.MemManage_Handler)
+    NMI_Handler                              0x08000f91   Thumb Code     2  at32f435_437_int.o(i.NMI_Handler)
+    PendSV_Handler                           0x08000f93   Thumb Code     2  at32f435_437_int.o(i.PendSV_Handler)
+    SVC_Handler                              0x08000f95   Thumb Code     2  at32f435_437_int.o(i.SVC_Handler)
+    SysTick_Handler                          0x08000f97   Thumb Code     8  at32f435_437_int.o(i.SysTick_Handler)
+    SystemInit                               0x08000fa1   Thumb Code   128  system_at32f435_437.o(i.SystemInit)
+    SystemTimer_Config                       0x08001031   Thumb Code    88  systemtimer.o(i.SystemTimer_Config)
+    SystemTimer_GetTick                      0x08001095   Thumb Code     6  systemtimer.o(i.SystemTimer_GetTick)
+    SystemTimer_IncTick                      0x080010a1   Thumb Code    12  systemtimer.o(i.SystemTimer_IncTick)
+    TMR5_GLOBAL_IRQHandler                   0x080010bd   Thumb Code    40  matrix_ll.o(i.TMR5_GLOBAL_IRQHandler)
+    TMR8_OVF_TMR13_IRQHandler                0x080010f1   Thumb Code   152  matrix_ll.o(i.TMR8_OVF_TMR13_IRQHandler)
+    UsageFault_Handler                       0x080011a9   Thumb Code     4  at32f435_437_int.o(i.UsageFault_Handler)
+    crm_ahb_div_set                          0x080011ad   Thumb Code    14  at32f435_437_crm.o(i.crm_ahb_div_set)
+    crm_apb1_div_set                         0x080011c1   Thumb Code    14  at32f435_437_crm.o(i.crm_apb1_div_set)
+    crm_apb2_div_set                         0x080011d5   Thumb Code    14  at32f435_437_crm.o(i.crm_apb2_div_set)
+    crm_auto_step_mode_enable                0x080011e9   Thumb Code    34  at32f435_437_crm.o(i.crm_auto_step_mode_enable)
+    crm_clock_source_enable                  0x08001211   Thumb Code    98  at32f435_437_crm.o(i.crm_clock_source_enable)
+    crm_clocks_freq_get                      0x08001279   Thumb Code   242  at32f435_437_crm.o(i.crm_clocks_freq_get)
+    crm_flag_get                             0x08001389   Thumb Code    44  at32f435_437_crm.o(i.crm_flag_get)
+    crm_hext_stable_wait                     0x080013b9   Thumb Code    46  at32f435_437_crm.o(i.crm_hext_stable_wait)
+    crm_periph_clock_enable                  0x080013e9   Thumb Code    70  at32f435_437_crm.o(i.crm_periph_clock_enable)
+    crm_pll_config                           0x08001435   Thumb Code    68  at32f435_437_crm.o(i.crm_pll_config)
+    crm_reset                                0x0800147d   Thumb Code   106  at32f435_437_crm.o(i.crm_reset)
+    crm_sysclk_switch                        0x080014f5   Thumb Code    54  at32f435_437_crm.o(i.crm_sysclk_switch)
+    crm_sysclk_switch_status_get             0x08001531   Thumb Code    10  at32f435_437_crm.o(i.crm_sysclk_switch_status_get)
+    gpio_default_para_init                   0x08001541   Thumb Code    20  at32f435_437_gpio.o(i.gpio_default_para_init)
+    gpio_init                                0x08001555   Thumb Code   122  at32f435_437_gpio.o(i.gpio_init)
+    gpio_pin_mux_config                      0x080015cf   Thumb Code    66  at32f435_437_gpio.o(i.gpio_pin_mux_config)
+    main                                     0x08001611   Thumb Code    48  main.o(i.main)
+    matrixDelay                              0x08001645   Thumb Code    14  matrix_ll.o(i.matrixDelay)
+    matrixFrameSwap                          0x08001665   Thumb Code     8  matrix_ll.o(i.matrixFrameSwap)
+    matrixInit                               0x08001671   Thumb Code   458  matrix_ll.o(i.matrixInit)
+    matrixPwmStart                           0x08001871   Thumb Code    12  matrix_ll.o(i.matrixPwmStart)
+    matrixSendClock                          0x08001881   Thumb Code    20  matrix_ll.o(i.matrixSendClock)
+    matrixSendConfReg                        0x0800189d   Thumb Code   138  matrix_ll.o(i.matrixSendConfReg)
+    matrixSendOn                             0x08001935   Thumb Code    38  matrix_ll.o(i.matrixSendOn)
+    matrixSendPreAct                         0x08001965   Thumb Code    38  matrix_ll.o(i.matrixSendPreAct)
+    matrixSendVerticalSync                   0x08001995   Thumb Code    38  matrix_ll.o(i.matrixSendVerticalSync)
+    matrixSetLatHi                           0x080019c5   Thumb Code     8  matrix_ll.o(i.matrixSetLatHi)
+    matrixSetLatLow                          0x080019d1   Thumb Code     8  matrix_ll.o(i.matrixSetLatLow)
+    matrixVerticalSync                       0x080019dd   Thumb Code    16  matrix_ll.o(i.matrixVerticalSync)
+    nvic_irq_enable                          0x080019f1   Thumb Code   190  at32f435_437_misc.o(i.nvic_irq_enable)
+    nvic_priority_group_config               0x08001ab9   Thumb Code    32  at32f435_437_misc.o(i.nvic_priority_group_config)
+    system_clock_config                      0x08001ae1   Thumb Code   144  at32f435_437_clock.o(i.system_clock_config)
+    system_core_clock_update                 0x08001b7d   Thumb Code   214  system_at32f435_437.o(i.system_core_clock_update)
+    systick_clock_source_config              0x08001c6d   Thumb Code    40  at32f435_437_misc.o(i.systick_clock_source_config)
+    tmr_base_init                            0x08001c95   Thumb Code    16  at32f435_437_tmr.o(i.tmr_base_init)
+    tmr_channel_value_set                    0x08001ca5   Thumb Code    46  at32f435_437_tmr.o(i.tmr_channel_value_set)
+    tmr_clock_source_div_set                 0x08001cd3   Thumb Code    10  at32f435_437_tmr.o(i.tmr_clock_source_div_set)
+    tmr_cnt_dir_set                          0x08001cdd   Thumb Code    10  at32f435_437_tmr.o(i.tmr_cnt_dir_set)
+    tmr_flag_clear                           0x08001ce7   Thumb Code     6  at32f435_437_tmr.o(i.tmr_flag_clear)
+    tmr_flag_get                             0x08001ced   Thumb Code    18  at32f435_437_tmr.o(i.tmr_flag_get)
+    tmr_interrupt_enable                     0x08001cff   Thumb Code    22  at32f435_437_tmr.o(i.tmr_interrupt_enable)
+    tmr_output_channel_config                0x08001d15   Thumb Code   434  at32f435_437_tmr.o(i.tmr_output_channel_config)
+    tmr_output_default_para_init             0x08001ec7   Thumb Code    18  at32f435_437_tmr.o(i.tmr_output_default_para_init)
+    tmr_period_buffer_enable                 0x08001ed9   Thumb Code    10  at32f435_437_tmr.o(i.tmr_period_buffer_enable)
+    tmr_primary_mode_select                  0x08001ee3   Thumb Code    10  at32f435_437_tmr.o(i.tmr_primary_mode_select)
+    tmr_sub_mode_select                      0x08001eed   Thumb Code    10  at32f435_437_tmr.o(i.tmr_sub_mode_select)
+    tmr_sub_sync_mode_set                    0x08001ef7   Thumb Code    10  at32f435_437_tmr.o(i.tmr_sub_sync_mode_set)
+    tmr_trigger_input_select                 0x08001f01   Thumb Code    10  at32f435_437_tmr.o(i.tmr_trigger_input_select)
+    _fp_init                                 0x08001f0b   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x08001f13   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x08001f13   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x08002010   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002030   Number         0  anon$$obj.o(Region$$Table)
+    timer                                    0x20000000   Data           4  main.o(.data)
+    uwTick                                   0x20000008   Data           4  systemtimer.o(.data)
+    registers                                0x20000040   Data          40  matrix_ll.o(.data)
+    system_core_clock                        0x2000006c   Data           4  system_at32f435_437.o(.data)
+    Modul                                    0x20000070   Data          28  main.o(.bss)
+    __libspace_start                         0x2000808c   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x200080ec   Data           0  libspace.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0800020d
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000020a0, Max: 0x00100000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002030, Max: 0x00100000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x0000020c   Data   RO          684    RESET               startup_at32f435_437.o
+    0x0800020c   0x0800020c   0x00000008   Code   RO         3468  * !!!main             c_w.l(__main.o)
+    0x08000214   0x08000214   0x00000034   Code   RO         3639    !!!scatter          c_w.l(__scatter.o)
+    0x08000248   0x08000248   0x0000001a   Code   RO         3641    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x08000262   0x08000262   0x00000002   PAD
+    0x08000264   0x08000264   0x0000001c   Code   RO         3643    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08000280   0x08000280   0x00000002   Code   RO         3507    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x08000282   0x08000282   0x00000004   Code   RO         3519    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3522    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3525    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3527    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3529    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3532    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3534    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3536    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3538    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3540    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3542    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3544    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3546    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3548    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3550    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3552    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3556    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3558    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3560    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         3562    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x08000286   0x08000286   0x00000002   Code   RO         3563    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x08000288   0x08000288   0x00000002   Code   RO         3594    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0800028a   0x0800028a   0x00000000   Code   RO         3620    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x0800028a   0x0800028a   0x00000000   Code   RO         3622    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x0800028a   0x0800028a   0x00000000   Code   RO         3624    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x0800028a   0x0800028a   0x00000000   Code   RO         3627    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x0800028a   0x0800028a   0x00000000   Code   RO         3630    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x0800028a   0x0800028a   0x00000000   Code   RO         3632    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x0800028a   0x0800028a   0x00000000   Code   RO         3635    .ARM.Collect$$libshutdown$$00000011  c_w.l(libshutdown2.o)
+    0x0800028a   0x0800028a   0x00000002   Code   RO         3636    .ARM.Collect$$libshutdown$$00000012  c_w.l(libshutdown2.o)
+    0x0800028c   0x0800028c   0x00000000   Code   RO         3470    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x0800028c   0x0800028c   0x00000000   Code   RO         3478    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x0800028c   0x0800028c   0x00000006   Code   RO         3490    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x08000292   0x08000292   0x00000000   Code   RO         3480    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x08000292   0x08000292   0x00000004   Code   RO         3481    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08000296   0x08000296   0x00000000   Code   RO         3483    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08000296   0x08000296   0x00000008   Code   RO         3484    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0800029e   0x0800029e   0x00000002   Code   RO         3511    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x080002a0   0x080002a0   0x00000000   Code   RO         3567    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x080002a0   0x080002a0   0x00000004   Code   RO         3568    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x080002a4   0x080002a4   0x00000006   Code   RO         3569    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x080002aa   0x080002aa   0x00000002   PAD
+    0x080002ac   0x080002ac   0x00000040   Code   RO          685    .text               startup_at32f435_437.o
+    0x080002ec   0x080002ec   0x000000ee   Code   RO         3462    .text               c_w.l(lludivv7m.o)
+    0x080003da   0x080003da   0x00000044   Code   RO         3464    .text               c_w.l(rt_memclr.o)
+    0x0800041e   0x0800041e   0x00000006   Code   RO         3466    .text               c_w.l(heapauxi.o)
+    0x08000424   0x08000424   0x0000004e   Code   RO         3475    .text               c_w.l(rt_memclr_w.o)
+    0x08000472   0x08000472   0x0000004a   Code   RO         3494    .text               c_w.l(sys_stackheap_outer.o)
+    0x080004bc   0x080004bc   0x00000012   Code   RO         3496    .text               c_w.l(exit.o)
+    0x080004ce   0x080004ce   0x00000002   PAD
+    0x080004d0   0x080004d0   0x00000008   Code   RO         3508    .text               c_w.l(libspace.o)
+    0x080004d8   0x080004d8   0x0000000c   Code   RO         3564    .text               c_w.l(sys_exit.o)
+    0x080004e4   0x080004e4   0x00000002   Code   RO         3583    .text               c_w.l(use_no_semi.o)
+    0x080004e6   0x080004e6   0x00000000   Code   RO         3585    .text               c_w.l(indicate_semi.o)
+    0x080004e6   0x080004e6   0x00000002   PAD
+    0x080004e8   0x080004e8   0x00000070   Code   RO          380    i.BSP_LED_Init      board_led.o
+    0x08000558   0x08000558   0x00000034   Code   RO          381    i.BSP_LED_Off       board_led.o
+    0x0800058c   0x0800058c   0x00000004   Code   RO          220    i.BusFault_Handler  at32f435_437_int.o
+    0x08000590   0x08000590   0x00000002   Code   RO          221    i.DebugMon_Handler  at32f435_437_int.o
+    0x08000592   0x08000592   0x00000002   PAD
+    0x08000594   0x08000594   0x000002b0   Code   RO            4    i.DoSomething       main.o
+    0x08000844   0x08000844   0x00000004   Code   RO          222    i.HardFault_Handler  at32f435_437_int.o
+    0x08000848   0x08000848   0x000001d8   Code   RO          494    i.MatrixDrawPixel   board_matrix.o
+    0x08000a20   0x08000a20   0x00000180   Code   RO          422    i.MatrixDrawRect    board_matrix.o
+    0x08000ba0   0x08000ba0   0x00000140   Code   RO          423    i.MatrixRenderRect  board_matrix.o
+    0x08000ce0   0x08000ce0   0x000000c0   Code   RO          428    i.Matrix_Init       board_matrix.o
+    0x08000da0   0x08000da0   0x000001ec   Code   RO          429    i.Matrix_Periodic_Handler  board_matrix.o
+    0x08000f8c   0x08000f8c   0x00000004   Code   RO          223    i.MemManage_Handler  at32f435_437_int.o
+    0x08000f90   0x08000f90   0x00000002   Code   RO          224    i.NMI_Handler       at32f435_437_int.o
+    0x08000f92   0x08000f92   0x00000002   Code   RO          225    i.PendSV_Handler    at32f435_437_int.o
+    0x08000f94   0x08000f94   0x00000002   Code   RO          226    i.SVC_Handler       at32f435_437_int.o
+    0x08000f96   0x08000f96   0x00000008   Code   RO          227    i.SysTick_Handler   at32f435_437_int.o
+    0x08000f9e   0x08000f9e   0x00000002   PAD
+    0x08000fa0   0x08000fa0   0x00000090   Code   RO          648    i.SystemInit        system_at32f435_437.o
+    0x08001030   0x08001030   0x00000064   Code   RO          295    i.SystemTimer_Config  systemtimer.o
+    0x08001094   0x08001094   0x0000000c   Code   RO          296    i.SystemTimer_GetTick  systemtimer.o
+    0x080010a0   0x080010a0   0x00000010   Code   RO          297    i.SystemTimer_IncTick  systemtimer.o
+    0x080010b0   0x080010b0   0x0000000c   Code   RO            5    i.System_Periodic_Handle  main.o
+    0x080010bc   0x080010bc   0x00000034   Code   RO          525    i.TMR5_GLOBAL_IRQHandler  matrix_ll.o
+    0x080010f0   0x080010f0   0x000000b8   Code   RO          526    i.TMR8_OVF_TMR13_IRQHandler  matrix_ll.o
+    0x080011a8   0x080011a8   0x00000004   Code   RO          228    i.UsageFault_Handler  at32f435_437_int.o
+    0x080011ac   0x080011ac   0x00000014   Code   RO          692    i.crm_ahb_div_set   at32f435_437_crm.o
+    0x080011c0   0x080011c0   0x00000014   Code   RO          693    i.crm_apb1_div_set  at32f435_437_crm.o
+    0x080011d4   0x080011d4   0x00000014   Code   RO          694    i.crm_apb2_div_set  at32f435_437_crm.o
+    0x080011e8   0x080011e8   0x00000028   Code   RO          695    i.crm_auto_step_mode_enable  at32f435_437_crm.o
+    0x08001210   0x08001210   0x00000068   Code   RO          702    i.crm_clock_source_enable  at32f435_437_crm.o
+    0x08001278   0x08001278   0x00000110   Code   RO          703    i.crm_clocks_freq_get  at32f435_437_crm.o
+    0x08001388   0x08001388   0x00000030   Code   RO          708    i.crm_flag_get      at32f435_437_crm.o
+    0x080013b8   0x080013b8   0x0000002e   Code   RO          710    i.crm_hext_stable_wait  at32f435_437_crm.o
+    0x080013e6   0x080013e6   0x00000002   PAD
+    0x080013e8   0x080013e8   0x0000004c   Code   RO          718    i.crm_periph_clock_enable  at32f435_437_crm.o
+    0x08001434   0x08001434   0x00000048   Code   RO          721    i.crm_pll_config    at32f435_437_crm.o
+    0x0800147c   0x0800147c   0x00000078   Code   RO          723    i.crm_reset         at32f435_437_crm.o
+    0x080014f4   0x080014f4   0x0000003c   Code   RO          724    i.crm_sysclk_switch  at32f435_437_crm.o
+    0x08001530   0x08001530   0x00000010   Code   RO          725    i.crm_sysclk_switch_status_get  at32f435_437_crm.o
+    0x08001540   0x08001540   0x00000014   Code   RO          930    i.gpio_default_para_init  at32f435_437_gpio.o
+    0x08001554   0x08001554   0x0000007a   Code   RO          931    i.gpio_init         at32f435_437_gpio.o
+    0x080015ce   0x080015ce   0x00000042   Code   RO          936    i.gpio_pin_mux_config  at32f435_437_gpio.o
+    0x08001610   0x08001610   0x00000034   Code   RO            6    i.main              main.o
+    0x08001644   0x08001644   0x0000000e   Code   RO          527    i.matrixDelay       matrix_ll.o
+    0x08001652   0x08001652   0x00000010   Code   RO          528    i.matrixDelaySignal  matrix_ll.o
+    0x08001662   0x08001662   0x00000002   PAD
+    0x08001664   0x08001664   0x0000000c   Code   RO          529    i.matrixFrameSwap   matrix_ll.o
+    0x08001670   0x08001670   0x00000200   Code   RO          530    i.matrixInit        matrix_ll.o
+    0x08001870   0x08001870   0x00000010   Code   RO          531    i.matrixPwmStart    matrix_ll.o
+    0x08001880   0x08001880   0x0000001c   Code   RO          532    i.matrixSendClock   matrix_ll.o
+    0x0800189c   0x0800189c   0x00000098   Code   RO          533    i.matrixSendConfReg  matrix_ll.o
+    0x08001934   0x08001934   0x00000030   Code   RO          535    i.matrixSendOn      matrix_ll.o
+    0x08001964   0x08001964   0x00000030   Code   RO          536    i.matrixSendPreAct  matrix_ll.o
+    0x08001994   0x08001994   0x00000030   Code   RO          537    i.matrixSendVerticalSync  matrix_ll.o
+    0x080019c4   0x080019c4   0x0000000c   Code   RO          538    i.matrixSetLatHi    matrix_ll.o
+    0x080019d0   0x080019d0   0x0000000c   Code   RO          539    i.matrixSetLatLow   matrix_ll.o
+    0x080019dc   0x080019dc   0x00000014   Code   RO          540    i.matrixVerticalSync  matrix_ll.o
+    0x080019f0   0x080019f0   0x000000c8   Code   RO         1030    i.nvic_irq_enable   at32f435_437_misc.o
+    0x08001ab8   0x08001ab8   0x00000028   Code   RO         1032    i.nvic_priority_group_config  at32f435_437_misc.o
+    0x08001ae0   0x08001ae0   0x0000009c   Code   RO          196    i.system_clock_config  at32f435_437_clock.o
+    0x08001b7c   0x08001b7c   0x000000f0   Code   RO          649    i.system_core_clock_update  system_at32f435_437.o
+    0x08001c6c   0x08001c6c   0x00000028   Code   RO         1035    i.systick_clock_source_config  at32f435_437_misc.o
+    0x08001c94   0x08001c94   0x00000010   Code   RO         2414    i.tmr_base_init     at32f435_437_tmr.o
+    0x08001ca4   0x08001ca4   0x0000002e   Code   RO         2422    i.tmr_channel_value_set  at32f435_437_tmr.o
+    0x08001cd2   0x08001cd2   0x0000000a   Code   RO         2423    i.tmr_clock_source_div_set  at32f435_437_tmr.o
+    0x08001cdc   0x08001cdc   0x0000000a   Code   RO         2424    i.tmr_cnt_dir_set   at32f435_437_tmr.o
+    0x08001ce6   0x08001ce6   0x00000006   Code   RO         2437    i.tmr_flag_clear    at32f435_437_tmr.o
+    0x08001cec   0x08001cec   0x00000012   Code   RO         2438    i.tmr_flag_get      at32f435_437_tmr.o
+    0x08001cfe   0x08001cfe   0x00000016   Code   RO         2446    i.tmr_interrupt_enable  at32f435_437_tmr.o
+    0x08001d14   0x08001d14   0x000001b2   Code   RO         2451    i.tmr_output_channel_config  at32f435_437_tmr.o
+    0x08001ec6   0x08001ec6   0x00000012   Code   RO         2456    i.tmr_output_default_para_init  at32f435_437_tmr.o
+    0x08001ed8   0x08001ed8   0x0000000a   Code   RO         2460    i.tmr_period_buffer_enable  at32f435_437_tmr.o
+    0x08001ee2   0x08001ee2   0x0000000a   Code   RO         2463    i.tmr_primary_mode_select  at32f435_437_tmr.o
+    0x08001eec   0x08001eec   0x0000000a   Code   RO         2467    i.tmr_sub_mode_select  at32f435_437_tmr.o
+    0x08001ef6   0x08001ef6   0x0000000a   Code   RO         2468    i.tmr_sub_sync_mode_set  at32f435_437_tmr.o
+    0x08001f00   0x08001f00   0x0000000a   Code   RO         2470    i.tmr_trigger_input_select  at32f435_437_tmr.o
+    0x08001f0a   0x08001f0a   0x0000000a   Code   RO         3579    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08001f14   0x08001f14   0x000000c0   Data   RO          432    .constdata          board_matrix.o
+    0x08001fd4   0x08001fd4   0x00000016   Data   RO          650    .constdata          system_at32f435_437.o
+    0x08001fea   0x08001fea   0x00000026   Data   RO          728    .constdata          at32f435_437_crm.o
+    0x08002010   0x08002010   0x00000020   Data   RO         3637    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002030, Size: 0x0000a8f0, Max: 0x00060000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08002030   0x00000006   Data   RW            8    .data               main.o
+    0x20000006   0x08002036   0x00000002   PAD
+    0x20000008   0x08002038   0x00000004   Data   RW          298    .data               systemtimer.o
+    0x2000000c   0x0800203c   0x00000034   Data   RW          434    .data               board_matrix.o
+    0x20000040   0x08002070   0x00000028   Data   RW          541    .data               matrix_ll.o
+    0x20000068   0x08002098   0x00000002   Data   RW          542    .data               matrix_ll.o
+    0x2000006a   0x0800209a   0x00000002   PAD
+    0x2000006c   0x0800209c   0x00000004   Data   RW          651    .data               system_at32f435_437.o
+    0x20000070        -       0x0000001c   Zero   RW            7    .bss                main.o
+    0x2000008c        -       0x00008000   Zero   RW          431    .bss                board_matrix.o
+    0x2000808c        -       0x00000060   Zero   RW         3509    .bss                c_w.l(libspace.o)
+    0x200080ec   0x080020a0   0x00000004   PAD
+    0x200080f0        -       0x00002000   Zero   RW          683    HEAP                startup_at32f435_437.o
+    0x2000a0f0        -       0x00000800   Zero   RW          682    STACK               startup_at32f435_437.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       156         12          0          0          0        646   at32f435_437_clock.o
+       914        106         38          0          0       9080   at32f435_437_crm.o
+       208          0          0          0          0       2579   at32f435_437_gpio.o
+        32          0          0          0          0       4738   at32f435_437_int.o
+       280         18          0          0          0      32820   at32f435_437_misc.o
+       630         16          0          0          0       9893   at32f435_437_tmr.o
+       164         12          0          0          0       1333   board_led.o
+      1860         74        192         52      32768       8317   board_matrix.o
+       752         24          0          6         28      54577   main.o
+      1174        170          0         42          0      11472   matrix_ll.o
+        64         26        524          0      10240        864   startup_at32f435_437.o
+       384         42         22          4          0       2392   system_at32f435_437.o
+       128         22          0          4          0      32597   systemtimer.o
+
+    ----------------------------------------------------------------------
+      6754        522        808        112      43036     171308   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         8          0          0          4          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        52          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+        18          0          0          0          0         80   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         6          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+       238          0          0          0          0        100   lludivv7m.o
+        68          0          0          0          0         68   rt_memclr.o
+        78          0          0          0          0         80   rt_memclr_w.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+        10          0          0          0          0        116   fpinit.o
+
+    ----------------------------------------------------------------------
+       678         16          0          0        100        948   Library Totals
+         8          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       660         16          0          0         96        832   c_w.l
+        10          0          0          0          0        116   fz_wm.l
+
+    ----------------------------------------------------------------------
+       678         16          0          0        100        948   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      7432        538        808        112      43136     165444   Grand Totals
+      7432        538        808        112      43136     165444   ELF Image Totals
+      7432        538        808        112          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 8240 (   8.05kB)
+    Total RW  Size (RW Data + ZI Data)             43248 (  42.23kB)
+    Total ROM Size (Code + RO Data + RW Data)       8352 (   8.16kB)
+
+==============================================================================
+

@@ -1,0 +1,51 @@
+.\objects\main.o: ..\Core\Src\main.c
+.\objects\main.o: ..\Drivers\cmsis\cm4\device_support\at32f435_437.h
+.\objects\main.o: ..\Drivers\cmsis\cm4\core_support\core_cm4.h
+.\objects\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: ..\Drivers\cmsis\cm4\core_support\cmsis_version.h
+.\objects\main.o: ..\Drivers\cmsis\cm4\core_support\cmsis_compiler.h
+.\objects\main.o: ..\Drivers\cmsis\cm4\core_support\cmsis_armcc.h
+.\objects\main.o: ..\Drivers\cmsis\cm4\core_support\mpu_armv7.h
+.\objects\main.o: ..\Drivers\cmsis\cm4\device_support\system_at32f435_437.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_def.h
+.\objects\main.o: ..\Core\Inc\at32f435_437_conf.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_crm.h
+.\objects\main.o: ..\Drivers\cmsis\cm4\device_support\at32f435_437.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_tmr.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_ertc.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_gpio.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_i2c.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_usart.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_pwc.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_can.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_adc.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_dac.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_spi.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_dma.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_debug.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_flash.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_crc.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_wwdt.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_wdt.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_exint.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_sdio.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_xmc.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_acc.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_misc.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_edma.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_qspi.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_scfg.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_emac.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_dvp.h
+.\objects\main.o: ..\Drivers\drivers\inc\at32f435_437_usb.h
+.\objects\main.o: ..\Core\Inc\at32f435_437_clock.h
+.\objects\main.o: ..\Core\Inc\main.h
+.\objects\main.o: ..\Core\Inc\board_conf.h
+.\objects\main.o: ..\Core\Inc\SystemTimer.h
+.\objects\main.o: ..\Drivers\BSP\board\board_delay.h
+.\objects\main.o: ..\Drivers\BSP\board\board_led.h
+.\objects\main.o: ..\Drivers\BSP\board\board_matrix\board_matrix.h
+.\objects\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: ..\Drivers\BSP\board\board_matrix\matrixConfig.h
